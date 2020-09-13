@@ -1,0 +1,135 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+header{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url(images/bg.jpg);
+	background-size: 100% 100%;
+	
+}
+nav{
+	background: transparent;
+	display: flex;
+	height: 10vh;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: Uppercase;
+	position: fixed;
+}
+
+.logo h1{
+	font-size: 5vw;
+	background: -webkit-linear-gradient(gold, orange);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.menu {
+	width: 40%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.menu a{
+	text-decoration: none;
+	color: white;
+	width: 25%;
+}
+
+.menu a:first-child{
+	color: yellow;  //#00b894
+}
+
+main{
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+section h2{
+	margin-top: 150px;
+	font-size: 3vw;
+	font-weight: 300;
+	text-shadow: 1px 1px 2px black;
+	color: orange;
+	margin-bottom: 10px;
+}
+
+section h1{
+	font-size: 4vw;
+	font-weight: 300;
+	text-shadow: 1px 1px 2px black;
+	color: white;
+	margin-bottom: 10px;
+}
+
+section h4{
+	font-size: 2vw;
+	font-weight: 400;
+	text-shadow: 2px 3px 2px black;
+	color: white;
+}
+
+footer{
+	text-align: center;
+	background: black;
+	color: white;
+	//margin-top: 1px;
+}
+
+.change_content:after{
+	content: "";
+	animation: addtext 15s infinite linear;
+	color: orange;
+}
+
+@keyframes addtext{
+	0%{content: "Goku";}
+	20%{content: "Vegeta";}
+	30%{content: "Krillin";}
+	40%{content: "Picollo";}
+	50%{content: "Yamcha";}
+	60%{content: "Tian";}
+	70%{content: "Gohan";}
+	80%{content: "Goten";}
+	90%{content: "Trunks";}
+	100%{content: "Buu";}
+}
+
+
+@media all and (max-width: 400px){
+	header{
+		width: 100%;
+		height: 100vh;
+		display: block;
+		background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url(images/minibg.jpg);
+		background-size: 100% 100%;	
+	}
+	
+	.menu a:last-child{
+		display: none;
+	
+	}
+	
+	section h2{
+		font-size: 4vw;
+	}
+
+	section h1{
+		font-size: 5vw;
+	}
+
+	section h4{
+		font-size: 3vw;
+	}
+
+}
